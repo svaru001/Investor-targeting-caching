@@ -96,7 +96,7 @@ isins.forEach((isin, i) => {
      console.log('--------------------------------------------------------')
      
   })
-  }, i * 3000);
+  }, i * 2000);
   setTimeout(() => {
     fetch('https://datacloud1.smartkarma.com/v3/target-investors/peers?isins='+isin+'&sort=asc&page=2', {
       headers: headers,
@@ -105,9 +105,9 @@ isins.forEach((isin, i) => {
     console.log("response ok?="+res.ok+"  response.status="+res.status+"  for isin="+isin+' asc+page#2 ')
      //console.log(res.status)
      //console.log(res)
-     //console.log('--------------------------------------------------------')  
+     console.log('--------------------------------------------------------')  
   })
-  }, i * 5000);
+  }, i * 3000);
   setTimeout(() => {
     fetch('https://datacloud1.smartkarma.com/v3/target-investors/peers?isins='+isin+'&sort=desc&page=1', {
       headers: headers,
@@ -116,10 +116,10 @@ isins.forEach((isin, i) => {
     console.log("response ok?="+res.ok+"  response.status="+res.status+"  for isin="+isin+' desc+page#1 ')
     //console.log(res.status)
      //console.log(res)
-     //console.log('--------------------------------------------------------')
+     console.log('--------------------------------------------------------')
      
   })
-  }, i * 7000);
+  }, i * 5000);
   setTimeout(() => {
     fetch('https://datacloud1.smartkarma.com/v3/target-investors/peers?isins='+isin+'&sort=desc&page=2', {
       headers: headers,
@@ -128,9 +128,9 @@ isins.forEach((isin, i) => {
     console.log("response ok?="+res.ok+"  response.status="+res.status+"  for isin="+isin+' desc+page#2 ')
      //console.log(res.status)
      //console.log(res)
-     //console.log('--------------------------------------------------------')  
+     console.log('--------------------------------------------------------')  
   })
-  }, i * 9000);
+  }, i * 7000);
 });
 
 
