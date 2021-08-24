@@ -45,11 +45,11 @@ const alphabets = [
 
 alphabets.forEach((currentAlpha, i) => {
   setTimeout(() => {
-    fetch('https://datacloud1.smartkarma.com/v3/target-investors/institutions?starts_with='+currentAlpha+'&page=1', {
+    fetch('https://datacloud1.smartkarma.com/v3/target-investors/institutions?starts_with='+currentAlpha+'&sort=asc&page=1', {
       headers: headers,
       method: 'GET',
    }).then(res =>  {
-     console.log("response ok?="+res.ok+"  response.status="+res.status+"  for alphabet="+currentAlpha+"   & page=1")
+     console.log("response ok?="+res.ok+"  response.status="+res.status+"  for alphabet="+currentAlpha+" &sort=asc  & page=1")
      //console.log(res.status)
      //console.log(res)
      //console.log('--------------------------------------------------------')
@@ -57,11 +57,36 @@ alphabets.forEach((currentAlpha, i) => {
   })
   }, i * 3000);
   setTimeout(() => {
-    fetch('https://datacloud1.smartkarma.com/v3/target-investors/institutions?starts_with='+currentAlpha+'&page=2', {
+    fetch('https://datacloud1.smartkarma.com/v3/target-investors/institutions?starts_with='+currentAlpha+'&sort=asc&page=2', {
       headers: headers,
       method: 'GET',
    }).then(res =>  {
-    console.log("response ok?="+res.ok+"  response.status="+res.status+"  for alphabet="+currentAlpha+"   & page=2")
+    console.log("response ok?="+res.ok+"  response.status="+res.status+"  for alphabet="+currentAlpha+" &sort=asc  & page=2")
+    //console.log(res.status)
+     //console.log(res)
+     //console.log('--------------------------------------------------------')
+     
+  })
+  }, i * 5000);
+
+  setTimeout(() => {
+    fetch('https://datacloud1.smartkarma.com/v3/target-investors/institutions?starts_with='+currentAlpha+'&sort=desc&page=1', {
+      headers: headers,
+      method: 'GET',
+   }).then(res =>  {
+     console.log("response ok?="+res.ok+"  response.status="+res.status+"  for alphabet="+currentAlpha+"  &sort=desc & page=1")
+     //console.log(res.status)
+     //console.log(res)
+     //console.log('--------------------------------------------------------')
+     
+  })
+  }, i * 3000);
+  setTimeout(() => {
+    fetch('https://datacloud1.smartkarma.com/v3/target-investors/institutions?starts_with='+currentAlpha+'&sort=desc&page=2', {
+      headers: headers,
+      method: 'GET',
+   }).then(res =>  {
+    console.log("response ok?="+res.ok+"  response.status="+res.status+"  for alphabet="+currentAlpha+" &sort=desc  & page=2")
     //console.log(res.status)
      //console.log(res)
      //console.log('--------------------------------------------------------')
