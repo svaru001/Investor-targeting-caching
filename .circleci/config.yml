@@ -17,9 +17,14 @@ workflows:
   version: 2
   scheduled-workflow:
     jobs: [build]
-nightly:
+  nightly:
     triggers:
       - schedule:
-          cron: "57 10 * * *"
+          cron: "4 11 * * *"
+          filters:
+            branches:
+              only:
+                - master
+                - beta
     jobs:
       - build
