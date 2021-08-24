@@ -1,0 +1,19 @@
+{
+  "name": "investor-targeting-daily-caching",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/babel-node investor-targeting-all-investors.js &&  ./node_modules/.bin/babel-node investor-targeting-my-investors.js && ./node_modules/.bin/babel-node investor-targeting-alphabetical.js && ./node_modules/.bin/babel-node investor-targeting-my-peers.js && exit 1" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.6.1",
+    "pg": "^8.7.1"
+  }
+}
