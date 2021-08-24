@@ -56,15 +56,3 @@ alphabets.forEach((page, i) => {
 //      })
 //  })
 
-// const client = new Client({
-//   user: 'skadmin',
-//   host: 'clients-api-staging.c8z9wqzjlfg3.ap-southeast-1.rds.amazonaws.com',
-//   database: 'clients_api_staging',
-//   password: '04Za7wdOX3xqQ3wPJ4L3',
-//   port: 5432,
-// })
-// client.connect()
-// client.query('update accounts set is_dormant=false where id in (2577,2576,2507,2580)', (err, res) => {
-// client.end()
-// console.log('External IP, Demo IP, Trial IP & Demo Syndicator/Issuer Paid IP have been marked as is-dormant=false')
-// })
